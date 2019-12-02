@@ -1,0 +1,3 @@
+rootProject.name = 'immutables.wrapper'
+include 'wrapper'
+include 'test'

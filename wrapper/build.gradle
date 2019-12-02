@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'de.hanbei'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor("org.immutables:value:$immutablesVersion")
+
+    compile "org.immutables:value-annotations:${immutablesVersion}"
+}

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'de.hanbei'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'org.assertj:assertj-core:3.13.2'
+    testImplementation 'org.mockito:mockito-core:3.1.0'
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
